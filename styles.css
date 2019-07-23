@@ -1,0 +1,724 @@
+:root {
+  /*CSS variables*/
+  --grey1: #4b4b4b;
+  --grey2: #ababab;
+  --grey3: #f1f1f1;
+  --grey3: #222222;
+  --grey4: #bbbbbb;
+  --grey5: #cccccc;
+}
+html {
+  scroll-behavior: smooth;
+  /*Smooth scroll*/
+}
+@keyframes bounce {
+  /*Animation for bounce*/
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+body {
+  /*Setting fonts, colors and behavior of any generic element in the body*/
+  background-color: var(--grey1);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  /*Setting constraints so that view doesn't force change*/
+  min-height: 100vh;
+  max-height: 100vh;
+  max-width: 97vw;
+  min-width: 97vw;
+}
+#hamburger {
+  /*Display set to none as hamburger menu only appears on smaller screens*/
+  display: none;
+}
+#navbar {
+  /*Setting Navigation bar dimensions and properties*/
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #343434;
+  color: white;
+  /*Fixed position so that Navigation bar stays on top*/
+  position: fixed;
+  top: 0;
+  width: 97vw;
+  z-index: 10;
+  /*Making the Navigation bar look more readable*/
+  margin-left: -0.8vw;
+  padding-left: 20px;
+  padding-right: 30px;
+  scroll-behavior: smooth;
+}
+#search {
+  /*Properties for the search bar*/
+  opacity: 0.7;
+  height: 20px;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+#fav {
+  /*Favourites tab*/
+  margin-top: 10px;
+  opacity: 0.8;
+  color: white;
+  text-decoration: none;
+}
+#fav:hover {
+  /*For better readability*/
+  opacity: 1;
+}
+#logo {
+  /*Setting properties of logo to make it look better*/
+  height: 80px;
+  width: 80px;
+  margin-left: -90px;
+}
+#bell {
+  /*Setting properties of the bell icon to make it fit on Navigation bar*/
+  width: 25px;
+  margin-top: 7px;
+}
+/*Hiding bell menu so that it only appears on hover*/
+#bell-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--grey3);
+  color: var(--grey4);
+  margin-top: -5px;
+  padding: 10px;
+  padding-top: 0;
+  border-radius: 10px;
+}
+#bell-menu p {
+  /*Setting bell menu's looks*/
+  padding: 7px;
+  border-bottom: solid 1px;
+}
+/*Configuring bell menu so that it appears on hover*/
+#bell:hover ~ #bell-menu {
+  display: inline-block;
+}
+#bell-menu:hover {
+  display: inline-block;
+}
+/*Making it so that the notification color changes on hover and cursor changes to pointer*/
+#bell-menu p {
+  cursor: pointer;
+  color: white;
+}
+/*Setting up user image and user menu*/
+#user-img {
+  width: 40px;
+  border-radius: 100%;
+}
+/*Setting up list styles*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  margin-top: -10px;
+  right: 2%;
+  width: 70px;
+  display: none;
+  background-color: var(--grey3);
+  padding-right: 10px;
+  padding-left: -10px;
+  border-radius: 10px;
+}
+li {
+  color: #dddddd;
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*Setting up so that user menu only appears on hover*/
+#user:hover ~ .hidden {
+  display: block;
+}
+.hidden:hover {
+  display: block;
+}
+#user:hover + .hidden,
+.hidden:hover {
+  display: block;
+}
+ul:hover + .hidden,
+.hidden:hover {
+  display: block;
+}
+li:hover {
+  cursor: pointer;
+  color: white;
+}
+/*Making queue text so that its position is fixed and right*/
+#q-text {
+  font-size: 1.5rem;
+  position: fixed;
+  top: 12%;
+  right: 0;
+  margin-bottom: 30px;
+  width: 16vw;
+  z-index: 2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/*Setting up the dot icon for queue menu*/
+#qdots {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 15.5%;
+  right: 0;
+  z-index: 2;
+}
+/*Making it so that queue menu appears only on hovering on dots*/
+#qdots:hover {
+  cursor: pointer;
+}
+.qdot-menu {
+  color: var(--grey5);
+  background-color: var(--grey3);
+  display: inline-block;
+  position: fixed;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 2px #333333;
+  right: 1%;
+  z-index: 3;
+  top: 19%;
+  display: none;
+}
+/*Making the links in the dot menu look appropriate to the theme*/
+.qdot-menu a {
+  text-decoration: none;
+  color: var(--grey5);
+}
+/*Queue menu settings so that it looks appropriate to the theme*/
+#qdots:hover ~ .qdot-menu {
+  display: inline-block;
+}
+.qdot-menu:hover {
+  display: inline-block;
+}
+.qdot-menu:hover p {
+  cursor: pointer;
+}
+.qdot-menu p:hover {
+  color: white;
+}
+/*Making the sidebar where all the songs are placed*/
+.sidenav::-webkit-scrollbar {
+  width: 0 !important;
+}
+.sidenav {
+  overflow: -moz-scrollbars-none;
+}
+/*Setting sidenav to be fixed irrespective of the scroll and giving appropriate theme settings*/
+.sidenav {
+  color: white;
+  text-decoration: none;
+  font-family: helvetica;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  margin-top: 50px;
+  right: 0;
+  padding-left: 10px;
+  background-color: var(--grey1);
+  /*Setting overflows so that text overflowing stays
+	 hidden in horizontal axis and is scrollable in vertical axis*/
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/*Making the links in the sidenav theme appropriate*/
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--grey2);
+  display: block;
+}
+.sidenav a:hover {
+  color: white;
+}
+/*Setting up the actual queue where all the songs are present*/
+.queue {
+  position: relative;
+}
+/*Setting up the properties of the images used in queue*/
+.queue-img {
+  height: 70px;
+  display: inline;
+  margin-bottom: 40px;
+}
+/*Setting up the properties of the album name used in queue*/
+.queue-text {
+  position: absolute;
+  top: 0%;
+  left: 30%;
+}
+/*Setting up the song name*/
+.q-song-name {
+  font-size: 0.8rem;
+  color: #cbcbcb;
+}
+/*adding the heart icon in the queue*/
+.heart {
+  width: 20px;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+/*Setting up the properties of the explorer*/
+#explore {
+  margin-top: 100px;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--grey1);
+}
+/*Setting up the properties of explorer items*/
+.exp-item {
+  margin-top: 20px;
+  height: 300px;
+  width: 300px;
+  flex-shrink: 0.5;
+  transition-duration: 0.3s;
+}
+/*Making it so that hovering changes the cursor to pointer*/
+.exp-item:hover {
+  cursor: pointer;
+}
+/*Editing the properties so that hovering on an 
+explorer item enlarges it and makes other two elements small*/
+#explore:hover > .exp-item {
+  transform: scale(0.9, 0.9);
+  opacity: 0.8;
+}
+.exp-item:hover {
+  transform: scale(1.1, 1.1) !important;
+  opacity: 1 !important;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  animation: ease-in-out;
+  transition-duration: 0.5s;
+}
+/*Setting properties for the artiist panel*/
+#artists {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+#artists-panel {
+  width: 65vw;
+  margin-top: 50px;
+  display: flex;
+  align-content: center;
+  /*Making it so that x-axis is scrollable*/
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+/*Hiding the scrollbars for different browsers*/
+#artists-panel::-webkit-scrollbar {
+  width: 0 !important;
+}
+#artist-panel {
+  overflow: -moz-scrollbars-none !important;
+  scrollbar-width: none;
+}
+#artist-panel {
+  -ms-overflow-style: none;
+}
+/*Theming the artists*/
+.artist {
+  opacity: 0.9;
+  height: 200px;
+  border-radius: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/*Adding animation on hover*/
+.artist:hover {
+  opacity: 1;
+  animation: bounce 1.2s;
+  animation-iteration-count: 1;
+}
+/*Theming the font, width and other properties of the artist panel's artist box*/
+.artist-box {
+  font-size: 1.5rem;
+  width: 100px;
+  text-align: right;
+  font-size: bolder;
+  display: block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-right: 150px;
+  margin-bottom: 1px;
+  float: left;
+}
+/*Changing cursor on hover*/
+.artist-box:hover {
+  cursor: pointer;
+}
+/*Left button for navigation*/
+.lbutton {
+  opacity: 0.8;
+  position: relative;
+  height: 40px;
+  display: inline;
+  left: 0;
+}
+/*Theming left button*/
+.lbutton:hover {
+  opacity: 0.75;
+}
+/*Right button for navigation*/
+.rbutton {
+  opacity: 0.8;
+  position: absolute;
+  height: 40px;
+  display: inline;
+  right: 30vw;
+}
+/*Theming right button*/
+.rbutton:hover {
+  opacity: 0.75;
+}
+/*Changing album art properties accordingly*/
+.album-art {
+  height: 150px;
+  margin: 20px;
+}
+/*Setting up the right dimensions for the name of the artist*/
+.artist-name {
+  border-radius: 20px;
+  margin-left: 30px;
+  width: 100px;
+  padding-left: -50px;
+}
+/*Making the categories*/
+#categories {
+  width: 70vw;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+/*Applying appropriate styles and themes*/
+#category-box div {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+/*Adding different backgrounds for different boxes*/
+#b-1 {
+  background-color: orange;
+}
+#category-box p {
+  font-weight: lighter;
+  text-shadow: 2px 2px 8px black;
+}
+#b-2 {
+  background-color: skyblue;
+}
+#b-3 {
+  background-color: lightgreen;
+}
+/*Using appropriate dimensions for images*/
+#category-box div img {
+  width: 300px;
+  opacity: 0.7;
+  transition-duration: 0.5s;
+}
+/*Adding text inside the image*/
+#category-box div p {
+  font-size: 50px;
+  display: inline;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0.7;
+}
+/*Adding zoom on hover*/
+#category-box div:hover img {
+  transform: scale(1.2);
+}
+/*Theming text on hover so that it looks clear*/
+#category-box div:hover p {
+  opacity: 1;
+  cursor: pointer;
+}
+/*Finishing the animation so that the image doesn't overflow the box and give a contained effect*/
+#category-box div {
+  width: 300px;
+  overflow: hidden;
+}
+/*Latest music box configuration*/
+#latest {
+  width: 70vw;
+  margin-left: 50px;
+}
+/*theming the latest box*/
+#latest-box {
+  height: 200px;
+  width: 60vw;
+  margin-bottom: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*setting position of album art in latest box*/
+.album-art {
+  position: absolute;
+  left: 0;
+}
+/*Setting behaviour on hover*/
+.album-art:hover {
+  opacity: 0.8;
+}
+/*Setting up the theme of links*/
+#latest-box a {
+  text-decoration: none;
+  color: var(--grey4);
+}
+#latest-box a:hover {
+  color: white;
+}
+/*Setting up the div where the whole song is contained, including image, text and dots menu*/
+.album {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 200px;
+  width: 400px;
+  font-size: 1.2rem;
+}
+/*Setting and theming the postition of the song text*/
+.song-name {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+}
+.song-name:hover {
+  cursor: pointer;
+}
+/*Adding some margins for the latest music box*/
+#latest {
+  margin-bottom: 300px;
+  margin-top: 100px;
+}
+.album-art:hover ~ a {
+  display: inline;
+}
+/*Making the play-pause functionality*/
+/*the basic div which contains the play-pause button*/
+.playpause {
+  display: inline-block;
+  width: 30px;
+  height: 50px;
+  position: relative;
+  transition-duration: 1s;
+}
+/*The left bar of play-pause*/
+.pp1 {
+  height: 40px;
+  width: 5px;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background-color: var(--grey4);
+  transition-duration: 0.1s;
+  animation: ease-in-out;
+}
+/*The right bar for play-pause*/
+.pp2 {
+  height: 40px;
+  width: 5px;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  background-color: var(--grey4);
+  transition-duration: 0.1s;
+  animation: ease-in-out;
+}
+/*Making it so that the input checkbox is invisible*/
+.playpause input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/*Making the play-pause transition happen by rotating and positioning .pp1 and .pp2 when focused*/
+input:focus + .pp1 {
+  transform: rotate(-45deg) translateX(5px) translateY(10px);
+  height: 20px;
+  animation: ease-in-out;
+}
+input:focus + .pp1 ~ .pp2 {
+  transform: translateY(27px) rotate(45deg) translateX(-15px);
+  height: 20px;
+  animation: ease-in-out;
+}
+input:focus + .pp2 {
+  transform: translateY(19px) translateX(-19px) rotate(45deg);
+  height: 20px;
+  animation: ease-in-out;
+}
+input:focus + .pp2 ~ pp1 {
+  transform: rotate(-45deg) translateX(25px) translateY(10px);
+  height: 20px;
+  animation: ease-in-out;
+}
+/*Reverting the transition when input checkbox is cheked, giving a toggle effect*/
+input:checked + .pp1 {
+  transform: none;
+  height: 40px;
+}
+input:checked + .pp2 {
+  transform: none;
+  height: 40px;
+}
+input:checked + .pp1 ~ .pp2 {
+  transform: none;
+  height: 40px;
+}
+input:checked + .pp2 ~ pp1 {
+  transform: none;
+  height: 40px;
+}
+/*Positioning and theming play-pause*/
+.playpause {
+  margin-right: 205px;
+  margin-top: 70px;
+  display: none;
+}
+.playpause:hover {
+  cursor: pointer;
+}
+.album:hover .playpause {
+  display: inline-block;
+}
+/*Adding dots menu to the latest release box*/
+/*Changing dots image to fit in the .album*/
+.dots {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15%;
+  right: 0;
+}
+.dots:hover {
+  /*Theming*/
+  cursor: pointer;
+}
+/*Making dot menu and keeping it hidden until hovered*/
+.dot-menu {
+  color: var(--grey5);
+  background-color: var(--grey3);
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  display: none;
+  font-size: 0.9rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border-color: var(--grey4);
+  border-width: 1px;
+}
+/*Theming the text in dot menu*/
+.dot-menu p {
+  border-width: 1px;
+  border-spacing: 10px;
+  padding-bottom: 5px;
+}
+.dot-menu p:hover {
+  color: white;
+}
+/*Making sure the dot menu is visible on hover*/
+.dots:hover ~ .dot-menu {
+  display: inline-block;
+}
+.dot-menu:hover {
+  display: inline-block;
+}
+.dot-menu p:hover {
+  cursor: pointer;
+}
+/*Setting up the Now Playing so that it stays fixed at bottom*/
+#now-playing {
+  font-size: 1.2rem;
+  box-shadow: 60px;
+  background-color: #323232;
+  color: grey;
+  width: 70vw;
+  margin-left: 10vw;
+  border-radius: 120px;
+  border-bottom-right-radius: 130px;
+  border-top-right-radius: 100px;
+  position: fixed;
+  bottom: 0;
+}
+/*Setting the "Now Playing:" text*/
+#np-text {
+  margin-left: 40px;
+  color: white;
+  position: fixed;
+  bottom: 2.5%;
+  display: inline-block;
+}
+/*Setting up the right dimensions for the audio tag*/
+#audio {
+  width: 38vw;
+  margin-left: 32vw;
+}
+/*Setting properties for the current song containing current song's image and text*/
+#current-song {
+  display: inline-block;
+  position: absolute;
+  left: 16%;
+  color: var(--grey5);
+}
+/*Setting the image dimensions and position*/
+#current-song img {
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 10px;
+  border-radius: 100%;
+}
+/*Setting the text dimensions and position*/
+#current-song p {
+  font-size: 1.2rem;
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  margin-left: 50px;
+  left: 50%;
+}
+/*Making it so that "Now Playing" text has the properties
+ of inline-block so that other things don't start from next line*/
+#np-text {
+  display: inline-block;
+}

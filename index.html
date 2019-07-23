@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+      Music Player
+    </title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="queries.css" />
+  </head>
+  <body>
+    <div id="hamburger">
+      <!-- Hamburger Menu -->
+      <img src="images/menu.png" id="menu-icon" />
+      <!-- Menu Icon -->
+      <div id="hamburger-menu">
+        <!-- Menu Content -->
+        <input type="text" placeholder=" Search..." id="h-search" />
+        <!-- Search Bar -->
+        <a href="SinglePlaylist/singlePlaylistScreen.html"><p>Favourites</p></a>
+        <!-- Favourites -->
+        <p>About</p>
+        <!-- User -> About -->
+        <p>Settings</p>
+        <!-- User -> Settings -->
+      </div>
+    </div>
+    <div id="navbar">
+      <!-- Navigation Bar (Top) -->
+      <input type="text" placeholder="Search..." id="search" />
+      <!-- Search Bar -->
+      <a href="SinglePlaylist/singlePlaylistScreen.html" id="fav"
+        ><span>Favourites</span></a
+      >
+      <!-- Favourites (Click to go to single playlist screen) -->
+      <a href="#"><img src="images/logo1.png" id="logo"/></a>
+      <!-- Logo for website (Click to return to top) -->
+      <span>
+        <img src="images/bell.png" id="bell" />
+        <!-- Bell icon (Hover to see notifications) -->
+        <div id="bell-menu">
+          <!-- Sample Notifications -->
+          <p>New album released - Don't Belong</p>
+          <p>New song released by artist - Sunflares</p>
+        </div>
+      </span>
+      <span>
+        <a href id="user">
+          <!-- User Menu -->
+          <img src="images/user.jpg" id="user-img" />
+          <!-- User Image -->
+        </a>
+        <ul class="hidden">
+          <!-- Content for user menu -->
+          <li>
+            About
+          </li>
+          <li>Settings</li>
+        </ul>
+      </span>
+    </div>
+    <h1
+      style="background-color: #3d3d3d; border-radius: 30px;padding-left: 10px; font-weight: lighter;"
+      id="q-text"
+    >
+      Queue
+    </h1>
+    <!-- Queue text -->
+    <img src="images/dots.png" id="qdots" />
+    <!-- Image for Dot menu for sidebar -->
+    <div class="qdot-menu">
+      <!-- Dot menu options -->
+      <a href="SinglePlaylist/singlePlaylistScreen.html"><p>My Playlist</p></a>
+      <!--Redirects to SPS (Single Playlist Screen) -->
+      <p>Recents</p>
+    </div>
+    <div class="sidenav">
+      <!-- Sidebar -->
+      <div class="queue">
+        <!-- Sidebar content -->
+        <img src="images/song1.png" class="queue-img" />
+        <!-- Placeholder image -->
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares<br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <!-- Placeholder text -->
+        <img src="images/heart.png" class="heart" />
+        <!-- Placeholder heart icon -->
+      </div>
+      <div class="queue">
+        <img src="images/song2.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song3.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song4.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br /><span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song1.png" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares<br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song2.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song3.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song4.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br /><span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song1.png" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares<br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song2.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song3.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song4.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br /><span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song1.png" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares<br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song2.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song3.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br />
+          <span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+      <div class="queue">
+        <img src="images/song4.jpg" class="queue-img" />
+        <a href="SinglePlaylist/singlePlaylistScreen.html" class="queue-text"
+          >Sunflares <br /><span class="q-song-name">Don't Belong</span></a
+        >
+        <img src="images/heart.png" class="heart" />
+      </div>
+    </div>
+
+    <div id="explore">
+      <!-- Explorer (Hover to enlarge) -->
+      <img src="images/ex1.jpg" class="exp-item" />
+      <img src="images/ex2.jpg" class="exp-item" />
+      <img src="images/ex3.jpg" class="exp-item" />
+    </div>
+    <div id="artists">
+      <!-- Click on the arrows to navigate (Need to scroll a little before buttons are reusable) -->
+      <!-- (Carousel-ish) -->
+      <h1>
+        Popular Artists
+      </h1>
+      <div id="artist-interface">
+        <div id="artists-panel">
+          <div class="artist-box">
+            <!-- Box containing artist name and image -->
+            <img src="images/artist1.png" id="start" class="artist" />
+            <p class="artist-name">21 Savage</p>
+          </div>
+          <div class="artist-box">
+            <img src="images/artist2.jpg" class="artist" />
+            <p class="artist-name">Chance</p>
+          </div>
+          <div class="artist-box">
+            <img src="images/artist3.jpg" class="artist" />
+            <p class="artist-name">J. Cole</p>
+          </div>
+          <div class="artist-box">
+            <img src="images/artist4.jpg" class="artist" />
+            <p class="artist-name">Aminé</p>
+          </div>
+          <div class="artist-box">
+            <img src="images/artist5.png" id="end" class="artist" />
+            <p class="artist-name">JID</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="#start"><img src="images/left.png" class="lbutton"/></a>
+        <!-- Left navigation button -->
+        <a href="#end"><img src="images/right.png" class="rbutton"/></a>
+        <!-- Right navigation button -->
+      </div>
+    </div>
+    <div id="categories">
+      <!-- Categories (Hover to zoom) -->
+      <div id="category-box">
+        <div id="b-1">
+          <img src="images/g1.jpg" />
+          <!-- Image -->
+          <p>Road Trip</p>
+          <!-- Text on image -->
+        </div>
+        <div id="b-2">
+          <img src="images/g2.jpg" />
+          <p>Party</p>
+        </div>
+        <div id="b-3">
+          <img src="images/g3.jpg" />
+          <p>Electronic</p>
+        </div>
+      </div>
+    </div>
+    <div id="latest">
+      <!-- Hover to show play/pause (Click to play/pause) -->
+      <!-- (Click is based on input checkbox so it toggles if clicked but might need to click multiple times as focus needs to be on checkbox and checkbox can sometimes be unresponsive depending on browser) -->
+      <h1>
+        Latest Releases
+      </h1>
+      <!-- heading -->
+      <div id="latest-box">
+        <div class="album">
+          <!-- Contains information about song -->
+          <img src="images/dots.png" class="dots" />
+          <!-- Dot menu image -->
+          <div>
+            <img src="images/song1.png" class="album-art" id="s1" />
+            <!-- Album art -->
+            <label class="playpause">
+              <!-- Play/Pause functionality -->
+              <input type="checkbox" />
+              <div class="pp1"><!-- left div of pause --></div>
+              <div class="pp2"><!-- right div of pause --></div>
+            </label>
+          </div>
+          <div class="song-name">
+            Sunflares <br /><br />
+            <span style="font-size: 0.9rem; color: #bbbbbb;"
+              >July 10, 2019</span
+            >
+          </div>
+          <div class="dot-menu">
+            <p>Play Now</p>
+            <p>Mark Favourite</p>
+            <p>Save to Playlist</p>
+          </div>
+        </div>
+        <div class="album">
+          <img src="images/dots.png" class="dots" />
+          <div><img src="images/song2.jpg" class="album-art" /></div>
+          <label class="playpause">
+            <input type="checkbox" />
+            <div class="pp1"></div>
+            <div class="pp2"></div>
+          </label>
+          <div class="song-name">
+            Sunflares <br /><br />
+            <span style="font-size: 0.9rem; color: #bbbbbb;"
+              >July 10, 2019</span
+            >
+          </div>
+          <div class="dot-menu">
+            <p>Play Now</p>
+            <p>Mark Favourite</p>
+            <p>Save to Playlist</p>
+          </div>
+        </div>
+        <div class="album">
+          <img src="images/dots.png" class="dots" />
+          <div><img src="images/song3.jpeg" class="album-art" /></div>
+          <label class="playpause">
+            <input type="checkbox" />
+            <div class="pp1"></div>
+            <div class="pp2"></div>
+          </label>
+          <div class="song-name">
+            Sunflares <br /><br />
+            <span style="font-size: 0.9rem; color: #bbbbbb;"
+              >July 10, 2019</span
+            >
+          </div>
+          <div class="dot-menu">
+            <p>Play Now</p>
+            <p>Mark Favourite</p>
+            <p>Save to Playlist</p>
+          </div>
+        </div>
+        <div class="album">
+          <img src="images/dots.png" class="dots" />
+          <div><img src="images/song4.jpg" class="album-art" /></div>
+          <label class="playpause">
+            <input type="checkbox" />
+            <div class="pp1"></div>
+            <div class="pp2"></div>
+          </label>
+          <div class="song-name">
+            Sunflares <br /><br />
+            <span style="font-size: 0.9rem; color: #bbbbbb;"
+              >July 10, 2019</span
+            >
+          </div>
+          <div class="dot-menu">
+            <p>Play Now</p>
+            <p>Mark Favourite</p>
+            <p>Save to Playlist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="now-playing">
+      <!-- Now Playing bar -->
+      <div id="np-text">
+        Now Playing:
+      </div>
+      <div id="current-song">
+        <!-- Current song's name and album art -->
+        <img src="images/song1.png" />
+        <p>Sunflares - Don't Belong</p>
+      </div>
+      <audio controls id="audio"></audio>
+      <!-- Audio button and controls -->
+    </div>
+  </body>
+</html>

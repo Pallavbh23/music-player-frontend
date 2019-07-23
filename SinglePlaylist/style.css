@@ -1,0 +1,99 @@
+/*Editing sidenav so that it fits with single playlist screen*/
+.sidenav {
+  margin-top: -10px;
+  width: 16vw;
+}
+/*Setting up album art's size and position*/
+#album-art {
+  position: absolute;
+  top: 23.5%;
+  left: 1%;
+  height: 27vw;
+  z-index: 1;
+}
+/*Theming album details*/
+#album-details h1 {
+  color: #bbbbbb;
+  font-size: 3rem;
+  position: absolute;
+  font-weight: 10;
+  left: 40%;
+  top: 7%;
+  z-index: 1;
+}
+#album-details h1:hover {
+  cursor: pointer;
+}
+/*Theming and positioning play button*/
+#play-btn {
+  padding: 10px;
+  border-radius: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: absolute;
+  top: 79%;
+  font-weight: 10;
+  color: #dddddd;
+  left: 10%;
+  background-color: #333333;
+}
+#play-btn:hover {
+  opacity: 0.8;
+  color: white;
+  cursor: pointer;
+}
+/*Making song list so that it fits the space*/
+#song-list {
+  width: 50vw;
+  margin-bottom: 100px;
+  border-radius: 30px;
+  padding: 20px;
+  opacity: 0.8;
+  margin-left: 28vw;
+  margin-top: 20vh;
+}
+/*Setting up properties for the table*/
+table {
+  background-color: #2f2f2f;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*Making sure now-playing is above all the other elements*/
+#now-playing {
+  z-index: 1;
+}
+/*Editing properties for the song name*/
+.song {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-bottom: 1px;
+  border-style: solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: black;
+}
+/*Changing colors for table headings*/
+td {
+  color: #aaaaaa;
+}
+/*Theming and spacing the table elements*/
+#song-table {
+  border-spacing: 30px;
+  text-align: left;
+}
+#song-table th {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+  color: #bbbbbb;
+}
+.song-info {
+  font-size: 1.2rem;
+}
+.song-info:hover {
+  cursor: pointer;
+  color: white;
+}
+tr:hover td {
+  color: #ffffff;
+}
